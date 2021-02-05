@@ -1,0 +1,114 @@
+img {
+  height: 350px;
+}
+header,
+footer {
+    font-size: 75px;
+    text-shadow: -4px -4px 0 #4de606, 4px -4px 0 #4de606, -4px 4px 0 #4de606,
+      4px 4px 0 #4de606;
+    background-color:black;
+    background-image: url(images/moviereel.png);
+    background-repeat: repeat x;
+    background-size: contain;
+  }
+  body {
+      background-color:  rgb(80, 78, 78);
+  }
+  
+
+
+/*LAYOUT
+_____________*/
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.large-container {
+  margin: 5px;
+}
+.search-container {
+  flex-basis: calc(100% / 4 - 26px);
+  margin: 5px;
+  padding: 3px;
+  align-self: flex-start;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+    color: white;
+}
+.results-container {
+  margin: auto;
+  flex-basis: 75%;
+  justify-content: center;
+}
+.block {
+  display: block;
+}
+.button {
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid #4de606;
+  color: white;
+}
+.button:hover {
+    color: teal;
+    cursor: pointer;
+}
+.bg-lt-gr {
+  background-color: #d3d2d2;
+}
+label {
+  font-size: 20px;
+}.font-frijole {
+    font-family: 'Frijole', cursive;
+    font-family: 'Orbitron', sans-serif;
+}
+.bk-img {
+  position: relative; 
+  height: 750px;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  
+}
+.bk-img::before {    
+  content: "";
+  background-image: url('images/moviereel.png');
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 10%;
+}
+
+
+@media (max-width: 600px) {
+  .search-container {  
+    flex-basis: 100%;
+  }
+  .button {
+    display: block;
+    margin: auto;
+    width: calc(100% / 3);
+  }
+
+  .results-container {
+    flex-basis: 100%;
+    margin: auto;
+  }
+}
+
+

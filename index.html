@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frijole&family=Orbitron:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="font-frijole text-center">Find Your Flix</header>
+    <div class="large-container flex flex-wrap">
+      <form class="flex flex-column search-container text-center bg-lt-gr">
+        <label class="block" for="title"
+          >Title of Movie, Series, or Episode</label
+        >
+        <input class="text-center" type="text" id="title" />
+        <br />
+        <div>
+          <label class="block" for="type">Movie, Series, or Episode</label>
+          <select name="movieType" id="type">
+            <option>Movie</option>
+            <option>Series</option>
+            <option>Episode</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label class="block" for="year">Year Released</label>
+          <input type="number" id="year" min="1870" max="2021" />
+        </div>
+        <br />
+        <input class="button" type="submit" value="SEARCH" id="fetch" />
+      </form>
+
+      <main class="flex results-container block text-center">
+        <div id="totalResults"></div>
+        <div class="text-white" id="results"></div>
+        <div class="flex bk-img"></div>
+      </main>
+    </div>
+    <footer class="font-frijole text-center">Movies, Series, Episodes</footer>
+    <script src="javascript.js"></script>
+  </body>
+</html>
