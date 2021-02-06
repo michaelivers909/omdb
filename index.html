@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Find Your Flix</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -15,7 +15,7 @@
   <body>
     <header class="font-frijole text-center">Find Your Flix</header>
     <div class="large-container flex flex-wrap">
-      <form class="flex flex-column search-container text-center bg-lt-gr">
+      <form class="flex flex-column search-container text-center font-frijole bg-lt-gr">
         <label class="block" for="title"
           >Title of Movie, Series, or Episode</label
         >
@@ -35,12 +35,13 @@
           <input type="number" id="year" min="1870" max="2021" />
         </div>
         <br />
-        <input class="button" type="submit" value="SEARCH" id="fetch" />
+        <input class="button" type="button" value="SEARCH" id="fetch" />
       </form>
 
-      <main class="flex results-container block text-center">
+      <main class="font-frijole flex results-container block text-center">
         <div id="totalResults"></div>
         <div class="text-white" id="results"></div>
+          <div class="hidden" id="showMore"></div>
         <div class="flex bk-img"></div>
       </main>
     </div>

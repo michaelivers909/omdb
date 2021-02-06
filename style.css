@@ -3,19 +3,17 @@ img {
 }
 header,
 footer {
-    font-size: 75px;
-    text-shadow: -4px -4px 0 #4de606, 4px -4px 0 #4de606, -4px 4px 0 #4de606,
-      4px 4px 0 #4de606;
-    background-color:black;
-    background-image: url(images/moviereel.png);
-    background-repeat: repeat x;
-    background-size: contain;
-  }
-  body {
-      background-color:  rgb(80, 78, 78);
-  }
-  
-
+  font-size: 75px;
+  text-shadow: -4px -4px 0 #4de606, 4px -4px 0 #4de606, -4px 4px 0 #4de606,
+    4px 4px 0 #4de606;
+  background-color: black;
+  background-image: url(images/moviereel.png);
+  background-repeat: repeat x;
+  background-size: contain;
+}
+body {
+  background-color: rgb(80, 78, 78);
+}
 
 /*LAYOUT
 _____________*/
@@ -44,7 +42,7 @@ _____________*/
   text-align: center;
 }
 .text-white {
-    color: white;
+  color: white;
 }
 .results-container {
   margin: auto;
@@ -61,30 +59,30 @@ _____________*/
   color: white;
 }
 .button:hover {
-    color: teal;
-    cursor: pointer;
+  color: teal;
+  cursor: pointer;
 }
 .bg-lt-gr {
   background-color: #d3d2d2;
 }
 label {
   font-size: 20px;
-}.font-frijole {
-    font-family: 'Frijole', cursive;
-    font-family: 'Orbitron', sans-serif;
+}
+.font-frijole {
+  font-family: "Frijole", cursive;
+  font-family: "Orbitron", sans-serif;
 }
 .bk-img {
-  position: relative; 
+  position: relative;
   height: 750px;
   align-items: center;
   justify-content: center;
   background-size: contain;
   background-position: center;
-  
 }
-.bk-img::before {    
+.bk-img::before {
   content: "";
-  background-image: url('images/moviereel.png');
+  background-image: url("images/moviereel.png");
   background-size: contain;
   position: absolute;
   top: 0px;
@@ -93,10 +91,12 @@ label {
   left: 0px;
   opacity: 10%;
 }
-
+.hidden {
+  visibility: hidden;
+}
 
 @media (max-width: 600px) {
-  .search-container {  
+  .search-container {
     flex-basis: 100%;
   }
   .button {
@@ -109,6 +109,7 @@ label {
     flex-basis: 100%;
     margin: auto;
   }
+  footer {
+    font-size: 50px;
+  }
 }
-
-
