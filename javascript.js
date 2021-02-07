@@ -55,18 +55,26 @@ document.getElementById("fetch").addEventListener("click", (e) => {
             .then((json) => {
               console.log(json);
 
+          json.Search.forEach((movie) => {
               let info = document.createElement("div");
               info.innerHTML = `<div>
             <p>${movie.imdbID}<p/>
             </div>`;
-
-              document.getElementById("showMore").classList.remove("hidden");
+              
+             
             });
+            
+            info.append(newDiv);
+            document.getElementById("showMore").append(info);
+            document.getElementById("showMore").classList.remove("hidden");
+            });
+            
         });
-
+        
         newDiv.append(show);
         console.log(newDiv);
         document.getElementById("results").append(newDiv);
+        
 
         document.getElementById(
           "totalResults"

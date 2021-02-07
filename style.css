@@ -92,7 +92,7 @@ label {
   opacity: 10%;
 }
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 600px) {
