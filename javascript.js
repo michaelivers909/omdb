@@ -8,7 +8,6 @@ document.getElementById("fetch").addEventListener("click", (e) => {
   let titleVal = document.getElementById("title").value;
   let typeVal = document.getElementById("type").value;
   let yearVal = document.getElementById("year").value;
-  //let imVal=document.getElementById("im").value;
 
   document.getElementById("results").innerHTML = ``;
 
@@ -34,6 +33,7 @@ document.getElementById("fetch").addEventListener("click", (e) => {
             <p>${movie.Type}</p>
             <p>${movie.Year}</p>
             <img src="${movie.Poster}" alt="Movie Poster"/>
+            <br></br>
         </div>`;
         let show = document.createElement("button");
         show.style.backgroundColor = "black";
@@ -55,26 +55,32 @@ document.getElementById("fetch").addEventListener("click", (e) => {
             .then((json) => {
               console.log(json);
 
-          json.Search.forEach((movie) => {
               let info = document.createElement("div");
+              info.style.textShadow =
+                "-2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000";
               info.innerHTML = `<div>
-            <p>${movie.imdbID}<p/>
+            <h2>IMDB ID - ${json.imdbID}<h2/>
+            <p>Genre - ${json.Genre}<p/>
+            <p>Starring - ${json.Actors}<p/>
+            <p>Writer - ${json.Writer}<p/>
+            <p>Director - ${json.Director}<p/>
+            <p>Plot - ${json.Plot}<p/>
+            <p>Rated - ${json.Rated}<p/>
+            <p>Runtime - ${json.Runtime}<p/>
+            <input class="button" type="button" value="CLOSE" id="close"/>
+            <br><br/><br></br>
             </div>`;
-              
-             
+              newDiv.append(info);
+              document.getElementById("close").classList.remove("hidden");
+              let closeInfo = document.getElementById("close");
+              closeInfo.addEventListener("click", (e) => {
+                info.innerText = ``;
+              });
             });
-            
-            info.append(newDiv);
-            document.getElementById("showMore").append(info);
-            document.getElementById("showMore").classList.remove("hidden");
-            });
-            
         });
-        
         newDiv.append(show);
         console.log(newDiv);
         document.getElementById("results").append(newDiv);
-        
 
         document.getElementById(
           "totalResults"
