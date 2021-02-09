@@ -12,7 +12,7 @@ document.getElementById("fetch").addEventListener("click", (e) => {
   document.getElementById("results").innerHTML = ``;
 
   fetch(
-    `http://www.omdbapi.com/?apikey=66d3f55c&s=${titleVal}&type=${typeVal}&y=${yearVal}`
+    `https://www.omdbapi.com/?apikey=66d3f55c&s=${titleVal}&type=${typeVal}&y=${yearVal}`
   )
     .then((res) => res.json())
     .then((json) => {
@@ -50,7 +50,7 @@ document.getElementById("fetch").addEventListener("click", (e) => {
         });
         show.value = movie.imdbID;
         show.addEventListener("click", (e) => {
-          fetch(`http://www.omdbapi.com/?apikey=66d3f55c&i=${e.target.value}`)
+          fetch(`https://www.omdbapi.com/?apikey=66d3f55c&i=${e.target.value}`)
             .then((res) => res.json())
             .then((json) => {
               console.log(json);
